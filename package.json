@@ -1,0 +1,23 @@
+{
+  "name": "cropsio",
+  "version": "0.1.0",
+  "description": "A basic io game for co-op farm building",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coopstools/cropsio.git"
+  },
+  "keywords": [
+    "game",
+    "io"
+  ],
+  "author": "coopstools",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coopstools/cropsio/issues"
+  },
+  "homepage": "https://github.com/coopstools/cropsio#readme"
+}
