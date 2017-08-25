@@ -1,0 +1,30 @@
+{
+  "name": "cropsio-fileServer",
+  "version": "0.1.0",
+  "description": "The file server for a simple farming io game",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coopstools/cropsio.git"
+  },
+  "keywords": [
+    "game",
+    "io"
+  ],
+  "author": "coopstools",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coopstools/cropsio/issues"
+  },
+  "homepage": "https://github.com/coopstools/cropsio#readme",
+  "dependencies" : {
+      "express"    : "~4.7.2",
+      "morgan"     : "~1.2.2",
+      "body-parser": "~1.5.2",
+      "method-override": "~2.1.2",
+      "socket.io": "2.0.3"
+  }
+}

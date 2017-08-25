@@ -1,0 +1,29 @@
+<html ng-app="farmApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> Cropsio </title>
+
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="bower_components/angular-socket-io/socket.js"></script>
+
+        <script src='global.js'></script>
+        <script src="index.js"></script>
+
+        <script src='bower_components/p5.js/lib/p5.min.js'></script>
+        <script src='structs/crop.js'></script>
+        <script src='p5.js'></script>
+    </head>
+    <body ng-controller="mainController">
+        <div>
+            <input type="text" placeholder="Hello" ng-model="input">
+            {{input}}
+        </div>
+        <div>
+            <button ng-click="submit()">Submit Name</button>
+        </div>
+        <div ng-repeat="name in names track by $index">{{ name }}</div>
+    </body>
+<html>
