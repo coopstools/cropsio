@@ -9,7 +9,7 @@
         <script src="/socket.io/socket.io.js"></script>
         <script src="bower_components/angular-socket-io/socket.js"></script>
 
-        <script src='global.js'></script>
+        <script src="consts.js"></script>
         <script src="index.js"></script>
 
         <script src='bower_components/p5.js/lib/p5.min.js'></script>
@@ -24,6 +24,18 @@
         <div>
             <button ng-click="submit()">Submit Name</button>
         </div>
+
+        <div>
+          <button ng-click="move('MV_UL')">\</button>
+          <button ng-click="move('MV_U')">|</button>
+          <button ng-click="move('MV_UR')">/</button>
+        </div>
+        <div>
+          <button ng-click="move('MV_DL')">/</button>
+          <button ng-click="move('MV_D')">|</button>
+          <button ng-click="move('MV_DR')">\</button>
+        </div>
+
         <div ng-repeat="name in names track by $index">{{ name }}</div>
     </body>
 <html>

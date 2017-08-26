@@ -1,7 +1,7 @@
 function Crop() {
 
     this.pos = createVector(width/2, height/2);
-    this.r = 64;
+    this.r = 10;
 
     this.show = function() {
         fill(255);

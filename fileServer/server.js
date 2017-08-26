@@ -3,10 +3,12 @@ var app = express();
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var registry = require('./registry.js');
+
+global = {};
+global.names = [];
 
 var server = require('http').createServer(app);
-var io = require('socket.io')(server);
+var io = require('./gameSocket.js')(server);
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
@@ -15,34 +17,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(methodOverride());
 
-global.registry = registry();
+var port = 8080;
 
-io.on('connection', function(socket) {
-
-    console.log('new connection');
-    console.log(socket.id);
-
-    var body = this;
-    global.names = [ 'Jared', 'Maria' ];
-
-    socket.emit('name', body.names);
-
-    socket.on('submit', function(data) {
-        var newName = data;
-        global.names.push(newName);
-        console.log(global.names);
-        socket.emit('update', body.names)
-    });
-
-    socket.on('request', function(data) {
-        socket.emit(body.names);
-    });
-
-    global.registry.add(socket);
+server.listen(port, function() {
+    console.log('\nSocket setup on port ' + port);
 });
-
-server.listen(8080)
-console.log('\nSocket setup on 2015');
 
 function getFiles (dir, files_){
     files_ = files_ || [];
