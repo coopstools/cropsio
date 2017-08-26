@@ -1,0 +1,27 @@
+{
+  "name": "cropsio-public",
+  "main": "index.js",
+  "authors": [
+    "James Cooper <james@coopstools.com>"
+  ],
+  "description": "The staticly served pages and scripts",
+  "keywords": [
+    "io",
+    "game"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-socket-io": "^0.7.0",
+    "angular": "^1.6.6",
+    "p5.js": "p5js#^0.5.12"
+  }
+}
